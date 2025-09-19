@@ -199,6 +199,67 @@ body {
     opacity: 0.9;
 }
 
+.authors-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    padding: 0 40px;
+}
+
+.author-card {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.author-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.author-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.author-photo::before {
+    content: "👤";
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+}
+
+.author-photo:has(.author-image)::before {
+    display: none;
+}
+
+.author-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.author-title {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.3;
+}
+
 .conclusion-slide {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     color: white;
