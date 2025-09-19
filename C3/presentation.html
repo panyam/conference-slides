@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Publisher's Protocol: MCP Framework</title>
+    <link rel="stylesheet" href="presentation.css">
+</head>
+<body>
+    <div class="slideshow-container">
+        <button class="presenter-mode-btn" onclick="openNotesWindow()">📝 Open Notes</button>
+        <div class="slide-counter">
+            <span id="slideNum">1</span> / <span id="totalSlides">15</span>
+        </div>
+
+        <!-- Slide 1: Title -->
+        <div class="slide active title-slide">
+            <h1>The Publisher's Protocol</h1>
+            <h2>Architecting a Machine-Consumable Content Framework for the Agentic AI Era</h2>
+            <div class="author-info">
+                <p><strong>Ram Joshi</strong> - Staff Engineer, Independent Researcher</p>
+                <p><strong>Sriram Panyam</strong> - IEEE Sr. Member</p>
+                <p><strong>Praveen Gujar</strong> - Enterprise Data Products in Digital Advertising</p>
+                <p><strong>Gunjan Paliwal</strong> - Product Marketing and Development</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: The Challenge -->
+        <div class="slide">
+            <h1>The Digital Publishing Inflection Point</h1>
+            <div class="highlight">
+                <h3>Dual Forces Reshaping the Industry</h3>
+                <p><strong>Opportunity:</strong> Agentic AI creates unprecedented commercial potential</p>
+                <p><strong>Threat:</strong> Sophisticated malicious scrapers pose escalating risks</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">$52.6B</span>
+                    <div class="stat-label">AI Agent Market by 2030</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">46.3%</span>
+                    <div class="stat-label">Projected CAGR</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">78%</span>
+                    <div class="stat-label">Organizations Planning AI Agent Deployment</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Bot Problem -->
+        <div class="slide">
+            <h1>The Pervasive Threat of Malicious Bots</h1>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">51%</span>
+                    <div class="stat-label">All Web Traffic is Automated</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">37%</span>
+                    <div class="stat-label">Internet Traffic from "Bad Bots"</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">7.9%</span>
+                    <div class="stat-label">Median Revenue Impact from Scraping</div>
+                </div>
+            </div>
+            <h3>Evolving Threat Landscape</h3>
+            <ul>
+                <li>AI-powered bots mimic human behavior</li>
+                <li>Vast residential proxy networks</li>
+                <li>Scraping-as-a-Service platforms</li>
+                <li>AI-powered CAPTCHA solving</li>
+            </ul>
+        </div>
+
+        <!-- Slide 4: The Duality -->
+        <div class="slide">
+            <h1>The Duality of Automated Agents</h1>
+            <div class="highlight">
+                <p><strong>Key Insight:</strong> The same technology powers both legitimate AI partners and malicious scrapers</p>
+            </div>
+            <table class="tier-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>AI Opportunity</th>
+                        <th>Scraping Threat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Market Growth</td>
+                        <td>46.3% CAGR</td>
+                        <td>88% increase in bot incidents</td>
+                    </tr>
+                    <tr>
+                        <td>Market Size</td>
+                        <td>$52.6B by 2030</td>
+                        <td>$186B in annual attack costs</td>
+                    </tr>
+                    <tr>
+                        <td>Publisher Impact</td>
+                        <td>New revenue streams</td>
+                        <td>7.9% revenue loss</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 5: Legal Landscape -->
+        <div class="slide">
+            <h1>Shifting Legal & Commercial Landscape</h1>
+            <h2>Erosion of "Fair Use" Defense</h2>
+            <ul>
+                <li><strong>Thomson Reuters v. Ross Intelligence:</strong> Court recognized "emerging market for licensing AI training data"</li>
+                <li><strong>The New York Times v. OpenAI:</strong> Commercial use challenges fair use claims</li>
+                <li><strong>US Copyright Office:</strong> AI training "implicates copyright law" and is not "inherently transformative"</li>
+            </ul>
+            <h2>Rise of Formal Data Licensing</h2>
+            <ul>
+                <li>TIME, Wiley, Associated Press securing major deals</li>
+                <li>Wiley: $44M in content licensing agreements</li>
+                <li>Premium content: $1-6.25 per minute for video</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Why Legacy Defenses Fail -->
+        <div class="slide">
+            <h1>Why Legacy Defenses Are Inadequate</h1>
+            <table class="tier-table">
+                <thead>
+                    <tr>
+                        <th>Technique</th>
+                        <th>Mechanism</th>
+                        <th>Effectiveness vs. Advanced Bots</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>robots.txt</td>
+                        <td>Voluntary plain-text suggestions</td>
+                        <td><strong>None</strong> - Malicious bots ignore it</td>
+                    </tr>
+                    <tr>
+                        <td>CAPTCHA</td>
+                        <td>Human vs. bot challenge tests</td>
+                        <td><strong>Low</strong> - AI solvers achieve 96% accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Modern Bot Detection</td>
+                        <td>AI-driven behavioral analysis</td>
+                        <td><strong>High</strong> - Detects non-human patterns</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="highlight">
+                <p><strong>Problem:</strong> robots.txt is voluntary, CAPTCHA is beaten by AI. We need a new approach.</p>
+            </div>
+        </div>
+
+        <!-- Slide 7: Introducing MCP -->
+        <div class="slide">
+            <h1>Introducing the Machine-Consumable Content Protocol (MCP)</h1>
+            <div class="highlight">
+                <h3>Strategic Framework Goals</h3>
+                <ul>
+                    <li><strong>Protect:</strong> Block unauthorized content extraction</li>
+                    <li><strong>Monetize:</strong> Create new revenue streams from AI partnerships</li>
+                    <li><strong>Control:</strong> Dictate terms of engagement and ensure fair value</li>
+                    <li><strong>Innovate:</strong> Modernize technology stack for agility</li>
+                </ul>
+            </div>
+            <p><strong>Core Philosophy:</strong> Transform from defensive security to offensive revenue strategy</p>
+        </div>
+
+        <!-- Slide 8: MCP Architecture - Three Pillars -->
+        <div class="slide">
+            <h1>MCP Architecture: Three Foundational Pillars</h1>
+            <div class="phase-box">
+                <h3>Pillar I: API-First Architecture</h3>
+                <p>Decouple frontend from backend, treat content as structured data delivered via APIs</p>
+            </div>
+            <div class="phase-box">
+                <h3>Pillar II: API Gateway as Control Plane</h3>
+                <p>Central enforcement point for authentication, authorization, rate limiting, and monitoring</p>
+            </div>
+            <div class="phase-box">
+                <h3>Pillar III: Tiered Cryptographic Authentication</h3>
+                <p>Multi-tier access control with sophisticated bot detection and Zero Trust architecture</p>
+            </div>
+        </div>
+
+        <!-- Slide 9: API-First Architecture -->
+        <div class="slide">
+            <h1>Pillar I: API-First Transformation</h1>
+            <h2>From Monolithic to Headless</h2>
+            <ul>
+                <li><strong>Traditional:</strong> Content, logic, and presentation tightly coupled</li>
+                <li><strong>Headless:</strong> Separate "head" (frontend) from "body" (CMS)</li>
+                <li><strong>Result:</strong> Content becomes structured data accessible via APIs</li>
+            </ul>
+            <div class="highlight">
+                <h3>Key Benefits</h3>
+                <ul>
+                    <li>Single, standardized gateway for all content requests</li>
+                    <li>Centralized control and monitoring</li>
+                    <li>Same APIs serve website, mobile app, and AI partners</li>
+                    <li>Granular access control becomes possible</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 10: API Gateway -->
+        <div class="slide">
+            <h1>Pillar II: API Gateway as Control Tower</h1>
+            <h2>Central Enforcement Functions</h2>
+            <ul>
+                <li><strong>Authentication & Authorization:</strong> Verify identity and enforce permissions</li>
+                <li><strong>Rate Limiting:</strong> Protect against DDoS and aggressive crawling</li>
+                <li><strong>Logging & Monitoring:</strong> Comprehensive audit trail for security and billing</li>
+                <li><strong>Request/Response Transformation:</strong> Standardize formats and enrich data</li>
+            </ul>
+            <div class="highlight">
+                <p><strong>Result:</strong> Every request is inspected, authenticated, and logged - creating perfect audit trail for billing and compliance</p>
+            </div>
+        </div>
+
+        <!-- Slide 11: Tiered Access Control -->
+        <div class="slide">
+            <h1>Pillar III: Tiered Access Control System</h1>
+            <table class="tier-table">
+                <thead>
+                    <tr>
+                        <th>Tier</th>
+                        <th>User Type</th>
+                        <th>Authentication</th>
+                        <th>Access Scope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #ffebee;">
+                        <td>Tier 0 (Blocked)</td>
+                        <td>Malicious Bots</td>
+                        <td>Fails Bot Detection</td>
+                        <td>No Access</td>
+                    </tr>
+                    <tr style="background: #e8f5e8;">
+                        <td>Tier 1 (Public)</td>
+                        <td>Human Users</td>
+                        <td>Passes Bot Detection</td>
+                        <td>Public Content</td>
+                    </tr>
+                    <tr style="background: #fff3e0;">
+                        <td>Tier 2 (Registered)</td>
+                        <td>Developers</td>
+                        <td>API Key</td>
+                        <td>Limited Datasets</td>
+                    </tr>
+                    <tr style="background: #e3f2fd;">
+                        <td>Tier 3 (Licensed)</td>
+                        <td>AI Companies</td>
+                        <td>OAuth/JWT</td>
+                        <td>Full Archive Access</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 12: Implementation Roadmap -->
+        <div class="slide">
+            <h1>Implementation Roadmap</h1>
+            <div class="phase-box">
+                <h3>Phase 1: Legal & Organizational Readiness</h3>
+                <ul>
+                    <li>Update Terms of Service to prohibit unauthorized access</li>
+                    <li>Develop standardized data licensing agreements</li>
+                    <li>Establish AI Governance Team (Legal, Tech, Business, Editorial)</li>
+                </ul>
+            </div>
+            <div class="phase-box">
+                <h3>Phase 2: Technical Infrastructure Overhaul</h3>
+                <ul>
+                    <li>Migrate to headless/API-first architecture</li>
+                    <li>Deploy API Gateway and bot management solutions</li>
+                    <li>Configure MCP access tiers and policies</li>
+                </ul>
+            </div>
+            <div class="phase-box">
+                <h3>Phase 3: Deployment & Partner Onboarding</h3>
+                <ul>
+                    <li>Phased rollout with monitoring</li>
+                    <li>Develop partner portal for credentials management</li>
+                    <li>Operationalize commercial pipeline</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 13: Key Benefits -->
+        <div class="slide">
+            <h1>MCP Benefits: From Defense to Revenue</h1>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">🛡️</span>
+                    <div class="stat-label"><strong>Protect</strong><br>Block malicious scrapers and unauthorized access</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">💰</span>
+                    <div class="stat-label"><strong>Monetize</strong><br>Create sustainable revenue from AI partnerships</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">⚖️</span>
+                    <div class="stat-label"><strong>Control</strong><br>Dictate terms and ensure fair compensation</div>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">🚀</span>
+                    <div class="stat-label"><strong>Innovate</strong><br>Modernize tech stack for future agility</div>
+                </div>
+            </div>
+            <div class="highlight">
+                <p><strong>Transformation:</strong> From passive gatekeepers fighting bots to essential enablers of the AI revolution</p>
+            </div>
+        </div>
+
+        <!-- Slide 14: Call to Action -->
+        <div class="slide">
+            <h1>The Path Forward</h1>
+            <div class="highlight">
+                <h3>Strategic Imperative</h3>
+                <p>Publishers must act now to capitalize on the AI opportunity while the legal and commercial environment is shifting in their favor.</p>
+            </div>
+            <h2>Why Now?</h2>
+            <ul>
+                <li>Legal precedents weakening "fair use" defense</li>
+                <li>Formal licensing market rapidly maturing</li>
+                <li>AI companies seeking legal, high-quality data sources</li>
+                <li>Traditional defenses are completely obsolete</li>
+            </ul>
+            <h2>The Choice</h2>
+            <p><strong>Reactive:</strong> Continue losing revenue to unauthorized scraping</p>
+            <p><strong>Proactive:</strong> Implement MCP and become an essential AI economy enabler</p>
+        </div>
+
+        <!-- Slide 15: Questions & Thanks -->
+        <div class="slide conclusion-slide">
+            <h1>Questions & Thank You</h1>
+            <div style="text-align: center; margin-top: 100px;">
+                <h2>Discussion & Questions</h2>
+                <p style="font-size: 1.4em; margin-top: 50px;">
+                    The Machine-Consumable Content Protocol<br>
+                    <em>Transforming Publishers for the AI Era</em>
+                </p>
+                <div style="margin-top: 80px; font-size: 1.1em;">
+                    <p>Contact the Authors:</p>
+                    <p>Ram Joshi • Sriram Panyam • Praveen Gujar • Gunjan Paliwal</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-button" onclick="changeSlide(-1)" id="prevBtn">❮ Previous</button>
+            <button class="nav-button" onclick="changeSlide(1)" id="nextBtn">Next ❯</button>
+        </div>
+    </div>
+
+    <script src="presentation.js"></script>
+</body>
+</html>
